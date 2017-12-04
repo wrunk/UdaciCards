@@ -23,8 +23,6 @@ export function getDecksFromAStore(){
       setLocalNotification()
       return []
     }
-    console.log("Store was not emtpy")
-    console.log(data)
     return JSON.parse(data)
   })
 }

@@ -16,7 +16,8 @@ class AddDeck extends React.Component {
   add = () => {
     this.props.addDeck({title: this.state.title})
     this.setState({title:''})
-    this.props.navigation.navigate('Decks')
+    // Navigate to the deck view on add.
+    this.props.navigation.navigate('Deck', {deck: {key: this.state.title, questions: []}})
   }
 
   render() {
